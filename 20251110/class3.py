@@ -1,8 +1,11 @@
+# more_shapes.png
+
 # import the necessary packages
 import numpy as np
 import argparse
 import cv2
 import imutils
+
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
@@ -33,11 +36,15 @@ cv2.waitKey(0)
 clone = image.copy()
 
 # loop over the contours again
-for (i, c) in enumerate(cnts):
+for i, c in enumerate(cnts):
     # compute the area and the perimeter of the contour
     area = cv2.contourArea(c)
     perimeter = cv2.arcLength(c, True)
-    print("Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(i + 1, area, perimeter))
+    print(
+        "Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(
+            i + 1, area, perimeter
+        )
+    )
 
     # draw the contour on the image
     cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
@@ -46,8 +53,15 @@ for (i, c) in enumerate(cnts):
     M = cv2.moments(c)
     cX = int(M["m10"] / M["m00"])
     cY = int(M["m01"] / M["m00"])
-    cv2.putText(clone, "#{}".format(i + 1), (cX - 20, cY), cv2.FONT_HERSHEY_SIMPLEX,
-                1.25, (255, 255, 255), 4)
+    cv2.putText(
+        clone,
+        "#{}".format(i + 1),
+        (cX - 20, cY),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1.25,
+        (255, 255, 255),
+        4,
+    )
 
 # show the output image
 cv2.imshow("Contours", clone)
@@ -70,7 +84,9 @@ clone = image.copy()
 for c in cnts:
     # fit a rotated bounding box to the contour and draw a rotated bounding box
     box = cv2.minAreaRect(c)
-    box = np.int0(cv2.cv.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box))
+    box = np.int0(
+        cv2.cv.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box)
+    )
     cv2.drawContours(clone, [box], -1, (0, 255, 0), 2)
 
 # show the output image

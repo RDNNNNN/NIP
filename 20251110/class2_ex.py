@@ -1,3 +1,5 @@
+# license_plate.png
+
 # import the necessary packages
 import numpy as np
 import argparse
@@ -18,7 +20,9 @@ blurred = cv2.GaussianBlur(gray, (3, 3), 0)
 cv2.imshow("Original", image)
 cv2.imshow("blurred", blurred)
 
-(T, threshInv) = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+(T, threshInv) = cv2.threshold(
+    blurred, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU
+)
 cv2.imshow("Threshold", threshInv)
 print("Otsu's thresholding value: {}".format(T))
 

@@ -1,3 +1,5 @@
+# license_plate.png
+
 # import the necessary packages
 import numpy as np
 import argparse
