@@ -1,6 +1,7 @@
 # --image basic_shapes.png
 
-""" Page 10 """
+"""Page 10"""
+
 import numpy as np
 import argparse
 import cv2
@@ -35,19 +36,18 @@ cv2.destroyAllWindows()
 
 """ Page 11 """
 # loop over the contours individually and draw each of them
-for (i, c) in enumerate(cnts):
-		print("Drawing contour #{}".format(i + 1))
-		cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
-		cv2.imshow("Single Contour", clone)
-		cv2.waitKey(0)
+for i, c in enumerate(cnts):
+    print("Drawing contour #{}".format(i + 1))
+    cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
+    cv2.imshow("Single Contour", clone)
+    cv2.waitKey(0)
 
 # re-clone the image and close all open windows
 clone = image.copy()
 cv2.destroyAllWindows()
 
 # find contours in the image, but this time keep only the EXTERNAL contours in the image
-cnts = cv2.findContours(gray.copy(),
-cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+cnts = cv2.findContours(gray.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 cv2.drawContours(clone, cnts, -1, (0, 255, 0), 2)
 print("Found {} EXTERNAL contours".format(len(cnts)))
@@ -62,12 +62,11 @@ cv2.destroyAllWindows()
 
 # loop over the contours individually
 for c in cnts:
-		# construct a mask by drawing only the current contour
-		mask = np.zeros(gray.shape, dtype="uint8")
-		cv2.drawContours(mask, [c], -1, 255, -1)
-		# show the images
-		cv2.imshow("Image", image)
-		cv2.imshow("Mask", mask)
-		cv2.imshow("Image + Mask",
-		cv2.bitwise_and(image, image, mask=mask))
-		cv2.waitKey(0)
+    # construct a mask by drawing only the current contour
+    mask = np.zeros(gray.shape, dtype="uint8")
+    cv2.drawContours(mask, [c], -1, 255, -1)
+    # show the images
+    cv2.imshow("Image", image)
+    cv2.imshow("Mask", mask)
+    cv2.imshow("Image + Mask", cv2.bitwise_and(image, image, mask=mask))
+    cv2.waitKey(0)
