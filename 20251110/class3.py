@@ -1,4 +1,4 @@
-# more_shapes.png
+# --image more_shapes.png
 
 # import the necessary packages
 import numpy as np
