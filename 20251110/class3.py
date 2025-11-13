@@ -107,7 +107,7 @@ clone = image.copy()
 
 # loop over the contours
 for c in cnts:
-    # to  fit an ellipse, our contour must have at least 5 points
+    # to fit an ellipse, our contour must have at least 5 points
     if len(c) >= 5:
         # fit an ellipse to the contour
         ellipse = cv2.fitEllipse(c)
