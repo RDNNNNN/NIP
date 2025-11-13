@@ -60,17 +60,6 @@ for i, c in enumerate(cnts):
     )
 
     if area > 880 and area < 2500:
-        # draw the contour on the image
-        # cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
-        #
-        # # compute the center of the contour and draw the contour number
-        # M = cv2.moments(c)
-        # cX = int(M["m10"] / M["m00"])
-        # cY = int(M["m01"] / M["m00"])
-        # cv2.putText(clone, "#{}".format(i + 1), (cX - 3, cY), cv2.FONT_HERSHEY_SIMPLEX,
-        #             0.5, (255, 255, 255), 1)
-        # Rectangle
-        # fit a bounding box to the contour
         (x, y, w, h) = cv2.boundingRect(c)
         cv2.rectangle(clone, (x, y), (x + w, y + h), (0, 255, 0), 1)
 
