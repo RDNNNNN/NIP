@@ -60,9 +60,9 @@ for i, c in enumerate(cnts):
     )
 
     if area > 880 and area < 2500:
+        # fit a bounding box to the contour
         (x, y, w, h) = cv2.boundingRect(c)
         cv2.rectangle(clone, (x, y), (x + w, y + h), (0, 255, 0), 1)
-
         mask = np.zeros(gray.shape, dtype="uint8")
         cv2.drawContours(mask, [c], -1, 255, -1)
 
