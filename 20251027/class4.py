@@ -1,8 +1,7 @@
 # --image salt.png
 # --image pepper_noise.webp
 
-"""Page 46"""
-
+"""P age 46 """
 # import the necessary packages
 import argparse
 import cv2

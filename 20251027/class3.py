@@ -1,7 +1,6 @@
 # --image salt.png
 
-"""Page 11"""
-
+""" Page 11 """
 # import the necessary packages
 import argparse
 import cv2
