@@ -24,21 +24,25 @@ cv2.imshow("blurred", blurred)
     blurred, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU
 )
 cv2.imshow("Threshold", threshInv)
-print("Otsu's thresholding value: {}".format(T))
+# print("Otsu's thresholding value: {}".format(T))
+print(f"Otsu's thresholding value: {T}")
 
 i = 0
 eroded = cv2.erode(threshInv.copy(), None, iterations=i + 1)
-cv2.imshow("Eroded {} times".format(i + 1), eroded)
+# cv2.imshow("Eroded {} times".format(i + 1), eroded)
+cv2.imshow(f"Eroded {i + 1} times", eroded)
 
 dilated = cv2.dilate(eroded.copy(), None, iterations=i + 1)
-cv2.imshow("Dilated {} times".format(i + 1), dilated)
+# cv2.imshow("Dilated {} times".format(i + 1), dilated)
+cv2.imshow(f"Dilated {i + 1} times", dilated)
 
 # find all contours in the image and draw ALL contours on the image
 cnts = cv2.findContours(eroded.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 clone = image.copy()
 cv2.drawContours(clone, cnts, -1, (0, 255, 0), 2)
-print("Found {} contours".format(len(cnts)))
+# print("Found {} contours".format(len(cnts)))
+print(f"Found {len(cnts)} contours")
 
 # show the output image
 cv2.imshow("All Contours", clone)
@@ -53,11 +57,8 @@ for i, c in enumerate(cnts):
     # compute the area and the perimeter of the contour
     area = cv2.contourArea(c)
     perimeter = cv2.arcLength(c, True)
-    print(
-        "Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(
-            i + 1, area, perimeter
-        )
-    )
+    # print("Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(i + 1, area, perimeter))
+    print(f"Contour #{i + 1} -- area: {area:.2f}, perimeter: {perimeter:.2f}")
 
     if area > 880 and area < 2500:
         # fit a bounding box to the contour

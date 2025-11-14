@@ -40,11 +40,8 @@ for i, c in enumerate(cnts):
     # compute the area and the perimeter of the contour
     area = cv2.contourArea(c)
     perimeter = cv2.arcLength(c, True)
-    print(
-        "Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(
-            i + 1, area, perimeter
-        )
-    )
+    # print("Contour #{} -- area: {:.2f}, perimeter: {:.2f}".format(i + 1, area, perimeter))
+    print(f"Contour #{i + 1} -- area: {area:.2f}, perimeter: {perimeter:.2f}")
 
     # draw the contour on the image
     cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
@@ -53,9 +50,10 @@ for i, c in enumerate(cnts):
     M = cv2.moments(c)
     cX = int(M["m10"] / M["m00"])
     cY = int(M["m01"] / M["m00"])
+    # cv2.putText(clone,"#{}".format(i + 1),(cX - 20, cY),cv2.FONT_HERSHEY_SIMPLEX,1.25,(255, 255, 255),4,)
     cv2.putText(
         clone,
-        "#{}".format(i + 1),
+        f"#{i + 1}",
         (cX - 20, cY),
         cv2.FONT_HERSHEY_SIMPLEX,
         1.25,

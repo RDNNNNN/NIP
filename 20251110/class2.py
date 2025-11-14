@@ -25,7 +25,9 @@ cnts = cv2.findContours(gray.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 clone = image.copy()
 cv2.drawContours(clone, cnts, -1, (0, 255, 0), 2)
-print("Found {} contours".format(len(cnts)))
+# print("Found {} contours".format(len(cnts)))
+print(f"Found {len(cnts)} contours")
+
 
 # show the output image
 cv2.imshow("All Contours", clone)
@@ -38,7 +40,8 @@ cv2.destroyAllWindows()
 """ Page 11 """
 # loop over the contours individually and draw each of them
 for i, c in enumerate(cnts):
-    print("Drawing contour #{}".format(i + 1))
+    # print("Drawing contour #{}".format(i + 1))
+    print(f"Drawing contour #{i + 1}")
     cv2.drawContours(clone, [c], -1, (0, 255, 0), 2)
     cv2.imshow("Single Contour", clone)
     cv2.waitKey(0)
@@ -51,7 +54,8 @@ cv2.destroyAllWindows()
 cnts = cv2.findContours(gray.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 cnts = imutils.grab_contours(cnts)
 cv2.drawContours(clone, cnts, -1, (0, 255, 0), 2)
-print("Found {} EXTERNAL contours".format(len(cnts)))
+# print("Found {} EXTERNAL contours".format(len(cnts)))
+print(f"Found {len(cnts)} EXTERNAL contours")
 
 # show the output image
 cv2.imshow("All Contours", clone)
