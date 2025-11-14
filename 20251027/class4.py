@@ -1,5 +1,6 @@
 # --image salt.png
-# --image Pepper-Noise.webp
+# --image pepper_noise.webp
+
 """Page 46"""
 
 # import the necessary packages
