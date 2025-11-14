@@ -1,6 +1,5 @@
 # --image salt.png
 # --image Pepper-Noise.webp
-
 """Page 46"""
 
 # import the necessary packages
@@ -22,8 +21,7 @@ params = [(11, 21, 7), (11, 41, 21), (11, 61, 39)]
 for diameter, sigmaColor, sigmaSpace in params:
     # apply bilateral filtering and display the image
     blurred = cv2.bilateralFilter(image, diameter, sigmaColor, sigmaSpace)
-    title = "Blurred d={}, sc={}, ss={}".format(
-        diameter, sigmaColor, sigmaSpace
-    )
+    # title = "Blurred d={}, sc={}, ss={}".format(diameter, sigmaColor, sigmaSpace)
+    title = f"Blurred d={diameter}, sc={sigmaColor}, ss={sigmaSpace}"
     cv2.imshow(title, blurred)
     cv2.waitKey(0)

@@ -1,7 +1,8 @@
 # --image pyimagesearch_logo.png
 # --image pyimagesearch_logo_noise.png
 
-""" Page 12 """
+"""Page 12"""
+
 # import the necessary packages
 import argparse
 import cv2
@@ -18,9 +19,10 @@ cv2.imshow("Original", image)
 
 # apply a series of erosions
 for i in range(0, 3):
-	eroded = cv2.erode(gray.copy(), None, iterations=i + 1)
-	cv2.imshow("Eroded {} times".format(i + 1), eroded)
-	cv2.waitKey(0)
+    eroded = cv2.erode(gray.copy(), None, iterations=i + 1)
+    # cv2.imshow("Eroded {} times".format(i + 1), eroded)
+    cv2.imshow(f"Eroded {i + 1} times", eroded)
+    cv2.waitKey(0)
 
 """ Page 21 """
 # close all windows to cleanup the screen
@@ -29,9 +31,10 @@ cv2.imshow("Original", image)
 
 # apply a series of dilations
 for i in range(0, 3):
-	dilated = cv2.dilate(gray.copy(), None, iterations=i + 1)
-	cv2.imshow("Dilated {} times".format(i + 1), dilated)
-	cv2.waitKey(0)
+    dilated = cv2.dilate(gray.copy(), None, iterations=i + 1)
+    # cv2.imshow("Dilated {} times".format(i + 1), dilated)
+    cv2.imshow(f"Dilated {i + 1} times", dilated)
+    cv2.waitKey(0)
 
 """ Page 27 """
 # close all windows to cleanup the screen and initialize the list
@@ -42,10 +45,11 @@ kernelSizes = [(3, 3), (5, 5), (7, 7)]
 
 # loop over the kernels and apply an "opening" operation to the image
 for kernelSize in kernelSizes:
-	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
-	opening = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel)
-	cv2.imshow("Opening: ({}, {})".format(kernelSize[0], kernelSize[1]), opening)
-	cv2.waitKey(0)
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+    opening = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel)
+    # cv2.imshow("Opening: ({}, {})".format(kernelSize[0], kernelSize[1]), opening)
+    cv2.imshow(f"Opening: ({kernelSize[0]}, {kernelSize[1]})", opening)
+    cv2.waitKey(0)
 
 """ Page 35 """
 # close all windows to cleanup the screen
@@ -54,10 +58,11 @@ cv2.imshow("Original", image)
 
 # loop over the kernels and apply a "closing" operation to the image
 for kernelSize in kernelSizes:
-	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
-	closing = cv2.morphologyEx(gray, cv2.MORPH_CLOSE, kernel)
-	cv2.imshow("Closing: ({}, {})".format(kernelSize[0], kernelSize[1]), closing)
-	cv2.waitKey(0)
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+    closing = cv2.morphologyEx(gray, cv2.MORPH_CLOSE, kernel)
+    # cv2.imshow("Closing: ({}, {})".format(kernelSize[0], kernelSize[1]), closing)
+    cv2.imshow(f"Closing: ({kernelSize[0]}, {kernelSize[1]})", closing)
+    cv2.waitKey(0)
 
 """ Page 38 """
 # close all windows to cleanup the screen
@@ -66,7 +71,8 @@ cv2.imshow("Original", image)
 
 # loop over the kernels and apply a "morphological gradient" operation to the image
 for kernelSize in kernelSizes:
-	kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
-	gradient = cv2.morphologyEx(gray, cv2.MORPH_GRADIENT, kernel)
-	cv2.imshow("Gradient: ({}, {})".format(kernelSize[0], kernelSize[1]), gradient)
-	cv2.waitKey(0)
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernelSize)
+    gradient = cv2.morphologyEx(gray, cv2.MORPH_GRADIENT, kernel)
+    # cv2.imshow("Gradient: ({}, {})".format(kernelSize[0], kernelSize[1]), gradient)
+    cv2.imshow(f"Gradient: ({kernelSize[0]}, {kernelSize[1]})", gradient)
+    cv2.waitKey(0)
