@@ -22,7 +22,8 @@ cv2.imshow("Image", image)
 # determines the best threshold value `T` for us
 (T, threshInv) = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
 cv2.imshow("Threshold", threshInv)
-print("Otsu's thresholding value: {}".format(T))
+# print("Otsu's thresholding value: {}".format(T))
+print(f"Otsu's thresholding value: {T}")
 
 # finally, we can visualize only the masked regions in the image
 cv2.imshow("Output", cv2.bitwise_and(image, image, mask=threshInv))
