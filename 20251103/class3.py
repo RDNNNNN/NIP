@@ -1,7 +1,6 @@
 # --image pill.png
 
-"""Page 36"""
-
+""" Page 36 """
 # import the necessary packages
 import numpy as np
 import argparse
