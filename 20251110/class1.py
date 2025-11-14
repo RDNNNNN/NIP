@@ -1,7 +1,6 @@
 # --image coins02.png
 
-"""Page 29、 46"""
-
+""" Page 29、 46 """
 # import the necessary packages
 import argparse
 import cv2
