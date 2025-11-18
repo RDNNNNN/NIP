@@ -70,6 +70,7 @@ args = vars(ap.parse_args())
 image = cv2.imread(args["image"])
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(gray, (3, 3), 0)
+
 # show the original image
 cv2.imshow("Original", image)
 cv2.imshow("blurred", blurred)
