@@ -1,22 +1,22 @@
 ## Morphological operations - Class 1
 
-![Class1_1](result/class1_1.png)
+![Class1_1](result/class1_01.png)
 
-![Class1_2](result/class1_2.png)
+![Class1_2](result/class1_02.png)
 
-![Class1_3](result/class1_3.png)
+![Class1_3](result/class1_03.png)
 
-![Class1_4](result/class1_4.png)
+![Class1_4](result/class1_04.png)
 
-![Class1_5](result/class1_5.png)
+![Class1_5](result/class1_05.png)
 
-![Class1_6](result/class1_6.png)
+![Class1_6](result/class1_06.png)
 
-![Class1_7](result/class1_7.png)
+![Class1_7](result/class1_07.png)
 
-![Class1_8](result/class1_8.png)
+![Class1_8](result/class1_08.png)
 
-![Class1_9](result/class1_9.png)
+![Class1_9](result/class1_09.png)
 
 ![Class1_10](result/class1_10.png)
 
