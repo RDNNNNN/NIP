@@ -7,7 +7,7 @@ import imutils
 # load the Tetris block image, convert it to grayscale, and threshold the image
 image = cv2.imread("tetris_blocks.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-thresh = cv2.threshold(gray, 225, 255,  cv2.THRESH_BINARY_INV)[1]
+thresh = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY_INV)[1]
 
 # show the original and thresholded images
 cv2.imshow("Original", image)
@@ -15,13 +15,14 @@ cv2.imshow("Thresh", thresh)
 
 # find external contours in the thresholded image and allocate memory
 # for the convex hull image
-cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
-                        cv2.CHAIN_APPROX_SIMPLE)
+cnts = cv2.findContours(
+    thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
+)
 cnts = imutils.grab_contours(cnts)
 hullImage = np.zeros(gray.shape[:2], dtype="uint8")
 
 # loop over the contours
-for (i, c) in enumerate(cnts):
+for i, c in enumerate(cnts):
     # compute the area of the contour along with the bounding box
     # to compute the aspect ratio
     area = cv2.contourArea(c)
@@ -64,12 +65,22 @@ for (i, c) in enumerate(cnts):
         shape = "Z-PIECE"
 
     # draw the shape name on the image
-    cv2.putText(image, shape, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
-                (240, 0, 159), 2)
+    cv2.putText(
+        image,
+        shape,
+        (x, y - 10),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.5,
+        (240, 0, 159),
+        2,
+    )
 
     # show the contour properties
     # print("Contour #{} -- aspect_ratio={:.2f},extent={:.2f}, solidity={:.2f}".format(i + 1, aspectRatio, extent, solidity))
-    print(f"Contour #{i + 1} -- aspect_ratio={aspectRatio:.2f},extent={extent:.2f}, solidity={solidity:.2f}")
+    print(
+        f"Contour #{i + 1} -- aspect_ratio={aspectRatio:.2f},"
+        f"extent={extent:.2f}, solidity={solidity:.2f}"
+    )
 
     # show the output images
     cv2.imshow("Convex Hull", hullImage)
