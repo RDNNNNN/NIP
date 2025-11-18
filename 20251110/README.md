@@ -36,27 +36,27 @@
 
 ### Bonus
 
-![Class3_ex1](result/class3_ex1.png)
+![Class3_ex1](result/class3_ex01.png)
 
 #### Retangle
 
-![Class3_ex2](result/class3_ex2.png)
+![Class3_ex2](result/class3_ex02.png)
 
 #### Mask
 
-![Class3_ex3](result/class3_ex3.png)
+![Class3_ex3](result/class3_ex03.png)
 
-![Class3_ex4](result/class3_ex4.png)
+![Class3_ex4](result/class3_ex04.png)
 
-![Class3_ex5](result/class3_ex5.png)
+![Class3_ex5](result/class3_ex05.png)
 
-![Class3_ex6](result/class3_ex6.png)
+![Class3_ex6](result/class3_ex06.png)
 
-![Class3_ex7](result/class3_ex7.png)
+![Class3_ex7](result/class3_ex07.png)
 
-![Class3_ex8](result/class3_ex8.png)
+![Class3_ex8](result/class3_ex08.png)
 
-![Class3_ex9](result/class3_ex9.png)
+![Class3_ex9](result/class3_ex09.png)
 
 ![Class3_ex10](result/class3_ex10.png)
 
