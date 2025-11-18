@@ -22,6 +22,6 @@
 
 ### Bonus
 
-![Class3_ex1](result/class3_ex1.png)
+![Class3_ex1_1](result/class3_ex1_1.png)
 
-![Class3_ex2](result/class3_ex2.png)
+![Class3_ex1_2](result/class3_ex1_2.png)
