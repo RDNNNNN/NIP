@@ -36,8 +36,6 @@ def sort_contours(cnts, method="left-to-right"):
 
 
 """ Page 7 """
-
-
 def draw_contour(image, c, i):
     # compute the center of the contour area and draw a circle
     # representing the center
