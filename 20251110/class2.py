@@ -2,10 +2,11 @@
 
 """ Page 10 """
 # import the necessary packages
-import numpy as np
 import argparse
+
 import cv2
 import imutils
+import numpy as np
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
