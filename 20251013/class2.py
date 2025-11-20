@@ -1,10 +1,12 @@
 # --image ut.jpg
 
-""" Page 8 """
+"""Page 8"""
+
 # import the necessary packages
-import numpy as np
 import argparse
+
 import cv2
+import numpy as np
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -31,7 +33,7 @@ print(f"min of 0: {str(cv2.subtract(np.uint8([50]), np.uint8([100])))}")
 # range. This is important to keep in mind when working with images.
 
 # print("wrap around: {}".format(str(np.uint8([200]) + np.uint8([100]))))
-print(f"wrap around: {str((np.uint8([200]) + np.uint8([100])))}")
+print(f"wrap around: {str(np.uint8([200]) + np.uint8([100]))}")
 # print("wrap around: {}".format(str(np.uint8([50]) - np.uint8([100]))))
 print(f"wrap around: {str(np.uint8([50]) - np.uint8([100]))}")
 

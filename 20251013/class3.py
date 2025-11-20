@@ -1,15 +1,16 @@
-""" Page 6 """
+"""Page 6"""
+
 # import the necessary packages
-import numpy as np
 import cv2
+import numpy as np
 
 # first, let's draw a rectangle
-rectangle = np.zeros((300, 300), dtype = "uint8")
+rectangle = np.zeros((300, 300), dtype="uint8")
 cv2.rectangle(rectangle, (25, 25), (275, 275), 255, -1)
 cv2.imshow("Rectangle", rectangle)
 
 # secondly, let's draw a circle
-circle = np.zeros((300, 300), dtype ="uint8")
+circle = np.zeros((300, 300), dtype="uint8")
 cv2.circle(circle, (150, 150), 150, 255, -1)
 cv2.imshow("Circle", circle)
 

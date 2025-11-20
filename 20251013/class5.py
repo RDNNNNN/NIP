@@ -1,10 +1,12 @@
 # --image ut.jpg
 
-""" Page 10 """
+"""Page 10"""
+
 # import the necessary packages
-import numpy as np
 import argparse
+
 import cv2
+import numpy as np
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -31,19 +33,19 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # visualize each channel in color
-zeros = np.zeros(image.shape[:2], dtype = "uint8")
+zeros = np.zeros(image.shape[:2], dtype="uint8")
 cv2.imshow("Red", cv2.merge([zeros, zeros, R]))
 cv2.imshow("Green", cv2.merge([zeros, G, zeros]))
 cv2.imshow("Blue", cv2.merge([B, zeros, zeros]))
 cv2.waitKey(0)
 
-white = np.ones(image.shape[:2], dtype = "uint8") * 255
+white = np.ones(image.shape[:2], dtype="uint8") * 255
 cv2.imshow("Red", cv2.merge([white, white, R]))
 cv2.imshow("Green", cv2.merge([white, G, white]))
 cv2.imshow("Blue", cv2.merge([B, white, white]))
 cv2.waitKey(0)
 
-white = np.zeros(image.shape[:2], dtype = "uint8") * 255
+white = np.zeros(image.shape[:2], dtype="uint8") * 255
 cv2.imshow("Red", cv2.merge([white, white, zeros]))
 cv2.imshow("Green", cv2.merge([white, zeros, white]))
 cv2.imshow("Blue", cv2.merge([white, white, white]))
