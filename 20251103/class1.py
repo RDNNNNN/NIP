@@ -3,6 +3,7 @@
 """ Page 19 """
 # import the necessary packages
 import argparse
+
 import cv2
 
 # construct the argument parser and parse the arguments

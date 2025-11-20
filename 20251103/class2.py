@@ -3,9 +3,10 @@
 
 """ Page 39 """
 # import the necessary packages
-from skimage.filters import threshold_local
 import argparse
+
 import cv2
+from skimage.filters import threshold_local
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
