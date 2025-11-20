@@ -1,9 +1,10 @@
 # --image pyimagesearch_logo.png
 # --image pyimagesearch_logo_noise.png
 
-"""Page 12"""
+""" Page 12 """
 # import the necessary packages
 import argparse
+
 import cv2
 
 # construct the argument parser and parse the arguments
