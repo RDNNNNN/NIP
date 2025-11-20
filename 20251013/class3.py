@@ -1,5 +1,4 @@
-"""Page 6"""
-
+""" Page 6 """
 # import the necessary packages
 import cv2
 import numpy as np
