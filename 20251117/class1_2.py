@@ -1,8 +1,8 @@
 """ Page 38 """
 # import the necessary packages
-import numpy as np
 import cv2
 import imutils
+import numpy as np
 
 # load the Tetris block image, convert it to grayscale, and threshold the image
 image = cv2.imread("tetris_blocks.png")
