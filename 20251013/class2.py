@@ -1,6 +1,7 @@
 # --image ut.jpg
 
-""" Page 8 """
+"""Page 8"""
+
 # import the necessary packages
 import argparse
 
