@@ -1,5 +1,6 @@
 # 影像辨識
 
+[20250915(二)](https://github.com/RDNNNNN/NIP/tree/main/20250915)
 [20250922(三)](https://github.com/RDNNNNN/NIP/tree/main/20250922)
 [20251013(四)](https://github.com/RDNNNNN/NIP/tree/main/20251013) 
 [20251027(六)](https://github.com/RDNNNNN/NIP/tree/main/20251027) 
