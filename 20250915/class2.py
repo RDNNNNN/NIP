@@ -17,12 +17,14 @@ cv2.imshow("Original", image)
 """ Page 19 """
 # images are just NumPy arrays. The top-left pixel can be found at (0, 0)
 (b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}".format(r=r, g=g, b=b))
+# print("Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}".format(r=r, g=g, b=b))
+print(f"Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}")
 
 # now, let's change the value of the pixel at (0, 0) and make it red
 image[0, 0] = (0, 0, 255)
 (b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}".format(r=r, g=g, b=b))
+# print("Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}".format(r=r, g=g, b=b))
+print(f"Pixel at (0, 0) - Red: {r}, Green: {g}, Blue: {b}")
 
 """ Page 23 """
 # compute the center of the image, which is simply the width and height
