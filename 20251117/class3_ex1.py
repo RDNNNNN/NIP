@@ -3,11 +3,11 @@
 
 """ Page 6 """
 # import the necessary packages
-import numpy as np
 import argparse
 
 import cv2
 import imutils
+import numpy as np
 
 
 def sort_contours(cnts, method="left-to-right"):
